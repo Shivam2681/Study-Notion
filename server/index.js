@@ -29,7 +29,7 @@ app.use(
 	cors({
 		origin: "https://study-notion-nine-sepia.vercel.app",
 		credentials: true,
-	})
+	}) 
 );
 app.use(
 	fileUpload({
