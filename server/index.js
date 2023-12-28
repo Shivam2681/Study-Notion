@@ -27,10 +27,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: "*",
+	  origin: "http://localhost:4000/api/v1",
 	  credentials: true,
-	  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-	  allowedHeaders: "Content-Type,Authorization",
 	})
 );
   
