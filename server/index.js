@@ -27,12 +27,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: "https://study-notion-nine-sepia.vercel.app",
+	  origin: "*",
 	  credentials: true,
 	  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 	  allowedHeaders: "Content-Type,Authorization",
 	})
-  );
+);
   
 app.use(
 	fileUpload({
