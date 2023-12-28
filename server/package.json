@@ -10,7 +10,7 @@
 	"keywords": [
 		"studynotion-backend"
 	],
-	"author": "Saikat Mukherjee",
+	"author": "Shivam Raj",
 	"license": "ISC",
 	"dependencies": {
 		"axios": "^1.6.3",
