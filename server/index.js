@@ -12,6 +12,7 @@ const cors = require("cors");
 const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
+const path = require("path");
 
 // Setting up port number
 const PORT = process.env.PORT || 4000;
@@ -32,7 +33,7 @@ app.use(
 	})
 );
 
-const path = require("path");
+
 
 app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
   
