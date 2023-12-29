@@ -55,8 +55,8 @@ app.use("/api/v1/reach", contactUsRoute);
 
 // Testing the server
 app.get("/", (req, res) => {
-	res.setHeader("ACCESS-Control-Allow-Credentials","true");
-	res.send("API is running..");
+	// res.setHeader("ACCESS-Control-Allow-Credentials","true");
+	// res.send("API is running..");
 	return res.json({
 		success: true,
 		message: "Your server is up and running ...",
