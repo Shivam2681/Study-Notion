@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: "http://localhost:4000/api/v1",
+	  origin: "http://localhost:3000",
 	  credentials: true,
 	})
 );
@@ -56,7 +56,7 @@ app.use("/api/v1/reach", contactUsRoute);
 
 // Testing the server
 app.get("/", (req, res) => {
-	res.setHeader("Access-Control-Allow-Origin","http://localhost:4000/api/v1");
+	res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
 	// res.send("API is running..");
 	return res.json({
 		success: true,
