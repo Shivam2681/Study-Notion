@@ -19,7 +19,7 @@ export const axiosInstance = axios.create({
   withCredentials: true, // Allow cookies to be sent with the request (if applicable)
   headers: {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "https://study-notion-nine-sepia.vercel.app/api/v1", // Replace with your frontend origin
+    "Access-Control-Allow-Origin": "https://study-notion-lac.vercel.app", // Replace with your frontend origin
   },
 });
 
