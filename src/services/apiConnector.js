@@ -26,7 +26,8 @@ export const axiosInstance = axios.create({
 export const apiConnector = (method, url, bodyData, headers, params) => {
   return axiosInstance({
     method: `${method}`,
-    url: `${url}`,
+    // url: `${url}`,
+    url: "https://study-notion-backend-9tnx.onrender.com/api/v1",
     data: bodyData || null,
     headers: headers || null,
     params: params || null,
