@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: "https://study-notion-backend-9tnx.onrender.com/api/v1",
+	  origin: "http://localhost:4000/api/v1",
 	  credentials: true,
 	})
 );
@@ -56,7 +56,7 @@ app.use("/api/v1/reach", contactUsRoute);
 
 // Testing the server
 app.get("/", (req, res) => {
-	// res.setHeader("ACCESS-Control-Allow-Credentials","true");
+	res.setHeader("Access-Control-Allow-Origin","http://localhost:4000/api/v1");
 	// res.send("API is running..");
 	return res.json({
 		success: true,
