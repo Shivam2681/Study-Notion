@@ -35,7 +35,7 @@ app.use(
 
 
 
-app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
+// app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
   
 app.use(
 	fileUpload({
