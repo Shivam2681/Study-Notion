@@ -14,6 +14,16 @@
 
 import axios from "axios";
 
+import cors from "cors";
+
+app.use(
+	cors({
+	  origin: "https://study-notion-backend-9tnx.onrender.com/api/v1",
+	  credentials: true,
+	})
+);
+
+
 // export const axiosInstance = axios.create({
 //   baseURL: "https://study-notion-backend-9tnx.onrender.com/api/v1", // Replace with your actual backend URL
 //   withCredentials: true, // Allow cookies to be sent with the request (if applicable)
@@ -25,15 +35,8 @@ import axios from "axios";
 
 export const apiConnector = (method, url, bodyData, headers, params) => {
   return axiosInstance({
-    baseURL: "https://study-notion-backend-9tnx.onrender.com/api/v1", // Replace with your actual backend URL
-    withCredentials: true, // Allow cookies to be sent with the request (if applicable)
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://study-notion-lac.vercel.app", // Replace with your frontend origin
-    },
     method: `${method}`,
-    // url: `${url}`,
-    url: "https://study-notion-backend-9tnx.onrender.com/api/v1",
+    url: `${url}`,
     data: bodyData || null,
     headers: headers || null,
     params: params || null,
