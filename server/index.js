@@ -27,10 +27,14 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: "http://localhost:4000/api/v1",
+	  origin: "*",
 	  credentials: true,
 	})
 );
+
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
   
 app.use(
 	fileUpload({
@@ -51,6 +55,8 @@ app.use("/api/v1/reach", contactUsRoute);
 
 // Testing the server
 app.get("/", (req, res) => {
+	res.setHeader("ACCESS-Control-Allow-Credentials","true");
+	res.send("API is running..");
 	return res.json({
 		success: true,
 		message: "Your server is up and running ...",
