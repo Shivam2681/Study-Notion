@@ -18,7 +18,7 @@ import cors from "cors";
 
 app.use(
 	cors({
-	  origin: "https://study-notion-backend-9tnx.onrender.com/api/v1",
+	  origin: "https://study-notion-backend-9tnx.onrender.com/api/v1/",
 	  credentials: true,
 	})
 );
