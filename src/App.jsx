@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import "./App.css"
+import axios from 'axios';
 // Redux
 import { useDispatch, useSelector } from "react-redux"
 // React Router
@@ -47,6 +48,14 @@ function App() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  axios.defaults.withCredentials = true;
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('https://study-notion-backend-9tnx.onrender.com/api/v1')
+    .then(result => console.log(result))
+    .catch(err => console.log(err));
+   }
 
   return (
     <div className="flex min-h-screen w-screen flex-col bg-richblack-900 font-inter">
