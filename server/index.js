@@ -26,6 +26,7 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 // app.use(
 // 	cors({
