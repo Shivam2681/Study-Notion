@@ -177,7 +177,8 @@ exports.login = async (req, res) => {
       message: `Login Failure Please Try Again`,
     })
   }
-}
+};
+
 // Send OTP For Email Verification
 exports.sendotp = async (req, res) => {
   try {

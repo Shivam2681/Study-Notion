@@ -26,12 +26,13 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-	  origin: "https://study-notion-lac.vercel.app",
-	  credentials: true,
-	})
-);
+
+// app.use(
+// 	cors({
+// 	  origin: "http://localhost:3000",
+// 	  credentials: true,
+// 	})
+// );
 
 
 
@@ -56,7 +57,7 @@ app.use("/api/v1/reach", contactUsRoute);
 
 // Testing the server
 app.get("/", (req, res) => {
-	res.setHeader("Access-Control-Allow-Origin","https://study-notion-lac.vercel.app");
+	// res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
 	// res.send("API is running..");
 	return res.json({
 		success: true,
