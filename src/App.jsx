@@ -50,12 +50,6 @@ function App() {
   }, [])
 
   axios.defaults.withCredentials = true;
-   const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post('https://study-notion-backend-9tnx.onrender.com/api/v1')
-    .then(result => console.log(result))
-    .catch(err => console.log(err));
-   }
 
   return (
     <div className="flex min-h-screen w-screen flex-col bg-richblack-900 font-inter">
