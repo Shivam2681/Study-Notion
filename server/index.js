@@ -36,7 +36,7 @@ app.use(
 
 
 
-// app.use(express.static(path.join(__dirname, "build"))); // put this line of code in app.js
+
   
 app.use(
 	fileUpload({
@@ -54,6 +54,13 @@ app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
 app.use("/api/v1/reach", contactUsRoute);
+
+// app.use(express.static(path.join(__dirname, './client/build'))); // put this line of code in app.js
+
+// app.get("*", function(req,res){
+// 	res.sendFile(path.join(__dirname, './client/build/index.html'))
+// });
+
 
 // Testing the server
 app.get("/", (req, res) => {
