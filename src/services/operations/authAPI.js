@@ -88,7 +88,7 @@ export function login(email, password, navigate) {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
-      const response = await apiConnector("POST", LOGIN_API, {
+      const response = await apiConnector("POST", 'https://studynotion-backend-2oon.onrender.com/api/v1/auth/login', {
         email,
         password,
       })

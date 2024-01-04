@@ -49,7 +49,7 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   return (
     <div className="flex min-h-screen w-screen flex-col bg-richblack-900 font-inter">
