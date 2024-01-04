@@ -3,8 +3,8 @@ require("dotenv").config();
 
 const { MONGODB_URL } = process.env;
 
-exports.connect = async () => {
-	await mongoose
+exports.connect = () => {
+	mongoose
 		.connect(MONGODB_URL, {
 			useNewUrlparser: true,
 			useUnifiedTopology: true,
@@ -16,4 +16,5 @@ exports.connect = async () => {
 			process.exit(1);
 		});
 };
+
 
